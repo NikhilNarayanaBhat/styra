@@ -4,7 +4,7 @@ LANGUAGE plpgsql
 AS $$
 DECLARE
     result JSONB := '{}'::jsonb;   -- Initialize as empty JSONB object
-    temp JSONB;
+    temp JSONB; --temp
 BEGIN
     -- Query 1: etl_cidata_report_test
     SELECT jsonb_agg(t) INTO temp
